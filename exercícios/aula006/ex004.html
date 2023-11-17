@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de String e Number</title>
+    <link rel="shortcut icon" href="../../favicon/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual o seu nome ?')
+        document.write(`Olá, ${nome}! Seu nome tem ${nome.length} letras.<br>`)
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}.<br>`)
+        document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}<br>`)
+        var salario = Number(window.prompt('Digite seu salário:'))
+        document.write(`Seu salário é ${salario.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})}`)
+    </script>
+</body>
+</html>

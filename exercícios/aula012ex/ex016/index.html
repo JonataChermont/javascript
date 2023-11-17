@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="shortcut icon" href="../../../favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <main>
+        <section>
+            <div id="formulario">
+                <form action="cadastro.php" method="post" autocomplete="on">
+                    <p>
+                        <label for="idano-nascimento">Ano de Nascimento:</label>
+                        <input type="number" name="ano-nascimento" id="idano-nascimento">
+                    </p>
+                    <p>
+                        Sexo: 
+                        <input type="radio" name="sexo" id="idmasculino" value="masculino">
+                        <label for="idmasculino">masculino</label>
+                        <input type="radio" name="sexo" id="idfeminino" value="feminino">
+                        <label for="idfeminino">feminino</label>
+                    </p>
+                    <p>
+                        <input type="button" value="verificar" onclick="verificar()">
+                    </p>
+                </form>
+            </div>
+            <div>
+                <div id="mensagem"></div>
+                <div id="imagem"></div>
+                <p>Preencha os dados acima para ver o resultado!</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; JonataChermont</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

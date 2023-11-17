@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Antes e Depois</title>
+    <link rel="shortcut icon" href="../../favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Antes e Depois</h1>
+        <input type="button" value="Antecessor e Sucessor" onclick="verificar()">
+    </main>
+    <script>
+        function verificar(){
+            var numero = Number(window.prompt('Digite um número inteiro qualquer:'))
+            window.alert(`Antes de ${numero}, temos o número ${numero - 1}\nDepois de ${numero}, temos o número ${numero + 1}`)
+        }
+    </script>
+</body>
+</html>

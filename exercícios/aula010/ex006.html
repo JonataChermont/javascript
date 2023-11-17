@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <link rel="shortcut icon" href="../../favicon/favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            position: relative;
+            background-color: rgb(105, 105, 173);
+            height: 100vh;
+        }
+
+        div#area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            border-radius: 8px;
+
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        interaja...
+    </div>
+    <script>
+        var interecao = window.document.getElementById('area')
+        interecao.addEventListener('click', clicou)
+        interecao.addEventListener('mouseenter', entrou)
+        interecao.addEventListener('mouseout', saiu)
+        
+        function clicou(){
+            interecao.innerText = 'CLICOU'
+            interecao.style.backgroundColor = 'red'
+        }
+
+        function entrou(){
+            interecao.innerText = 'ENTROU'
+        }
+
+        function saiu(){
+            interecao.innerText = 'SAIU'
+            interecao.style.backgroundColor = '#fff'
+        }
+    </script>
+</body>
+</html>

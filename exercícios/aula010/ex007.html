@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            position: relative;
+            height: 100vh;
+            background-color: rgb(105, 105, 173);
+        }
+
+        main {
+            display: flex;
+            position: absolute;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 15px;
+            left: 50%;
+            top: 50%;
+            padding: 20px 15px;
+            min-width: 200px;
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.800);
+            text-align: center;
+
+            transform: translate(-50%, -50%);
+        }
+
+        input {
+            min-width: 40px;
+            max-width: 70px;
+            padding: 5px 0px;
+            border: 1px solid gray;
+            border-radius: 3px;
+            text-align: center;
+        }
+
+        input[type=button] {
+            margin-left: 3px;
+            min-width: 50px;
+            max-width: 80px;
+        }
+
+        input[type=button]:hover {
+            background-color: #000;
+            border: 1px solid #000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Somando Valores</h1>
+        <div>
+            <input type="number" name="primeironumero" id="idprimeironumero"> + 
+            <input type="number" name="segundonumero" id="idsegundonumero">
+            <input type="button" value="somar" onclick="somar()">
+        </div>
+        <div id="resultado"></div>
+    </main>
+    <script>
+        function somar(){
+            var PrimeiroNumero = document.getElementById('idprimeironumero')
+            var SegundoNumero = document.querySelector('input#idsegundonumero')
+            var resultado = document.getElementById('resultado')
+            var PrimeiraConversao = Number(PrimeiroNumero.value)
+            var SegundaConversao = Number(SegundoNumero.value)
+            var soma = PrimeiraConversao + SegundaConversao
+            resultado.innerHTML = `A soma entre ${PrimeiraConversao} e ${SegundaConversao} é igual a <strong>${soma}</strong>`
+        }
+    </script>
+</body>
+</html>

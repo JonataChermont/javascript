@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao DOM</title>
+    <link rel="shortcut icon" href="../../favicon/favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            position: relative;
+            background-color: rgb(105, 105, 173);
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh;
+            text-align: center;
+        }
+
+        main {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px 15px;
+
+            transform: translate(-50%, -50%);
+        }
+
+        h1, p, div {
+            margin: 5px;
+        }
+
+        div:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 id="titulo">Iniciando estudos DOM</h1>
+        <p>Aqui vai o resultado</p>
+        <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+        <div>click em mim</div>
+    </main>
+    <script>
+        var titulo = window.document.querySelector('h1#titulo')
+        titulo.style.textShadow = '0px 0px 10px rgba(0, 0, 0, 0.300)'
+        var click = window.document.getElementsByTagName('div')[0]
+        click.innerText = 'Não click em mim!'
+    </script>
+</body>
+</html>

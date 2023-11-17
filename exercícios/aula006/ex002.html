@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Comandos em JS</title>
+    <link rel="shortcut icon" href="../../favicon/favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            position: relative;
+            height: 100vh;
+            background-color: rgb(105, 105, 173);
+            font-size: 1em;
+            font-weight: normal;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        main {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.452);
+            background-color: white;
+            border-radius: 8px;
+            padding: 50px;
+
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Olá, mundo!</h1>
+        <p>Já me livrei da maldição.</p>
+    </main>
+    <script>
+        var nome = window.prompt('digite seu nome:')
+        window.alert('É um grande prazer te conhecer, ' + nome + '!')
+    </script>
+</body>
+</html>

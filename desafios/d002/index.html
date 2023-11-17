@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Boas-vindas</title>
+    <link rel="shortcut icon" href="../../favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Boas-vindas</h1>
+        <input type="button" value="inicie o desafio" onclick="BemVindo()">
+    </main>
+    <script>
+        function BemVindo(){
+            var nome = window.prompt('Qual o seu nome ?')
+            var idade = window.prompt(`Olá, ${nome}! Quantos anos você tem ?`)
+            var ConversorIdade = Number(idade)
+            window.alert(`Acabei de conhecer ${nome}, que tem ${ConversorIdade} anos de idade.`)
+        }
+    </script>
+</body>
+</html>

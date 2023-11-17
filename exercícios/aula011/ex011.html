@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="../../favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Identidade</h1>
+        <div>
+            <input type="text" name="pais" id="idpais" placeholder="seu país natal" maxlength="58">
+            <input type="button" value="verificar" onclick="verificar()">
+        </div>
+        <div id="resultado"></div>
+    </main>
+    <script>
+        function verificar(){
+            var pais = document.getElementById('idpais')
+            var resultado = document.getElementById('resultado')
+            resultado.innerHTML = `<p>Vivendo no/na ${pais.value}</p>`
+            if (pais.value.toUpperCase() == 'BRASIL'){
+                resultado.innerHTML += '<p>Você é brasileiro</p>'
+            }else{
+                resultado.innerHTML += '<p>Voçê é estrangeiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>
